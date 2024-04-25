@@ -1,12 +1,12 @@
 // src/main.rs
 
 fn main() {
-    let result = add(2, 3);
-    println!("The result of adding 2 and 3 is {}", result);
+    let result = concat_strings("Hello, ", "world!");
+    println!("{}", result);
 }
 
-fn add(a: i32, b: i32) -> i32 {
-    a + b
+fn concat_strings(a: &str, b: &str) -> String {
+    format!("{}{}", a, b)
 }
 
 #[cfg(test)]
@@ -14,7 +14,7 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_add() {
-        assert_eq!(add(2, 3), 5);
+    fn test_concat_strings() {
+        assert_eq!(concat_strings("Rust ", "is awesome"), "Rust is awesome");
     }
 }
