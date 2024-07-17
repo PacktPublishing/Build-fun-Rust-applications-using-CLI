@@ -1,0 +1,5 @@
+Rust is fast.
+Rust is safe.
+Rust is concurrent.
+Rust is fun!
+C is difficult.
